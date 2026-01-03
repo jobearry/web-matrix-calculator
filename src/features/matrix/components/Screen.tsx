@@ -1,5 +1,5 @@
-import { MatrixCell } from '../MatrixCell';
-import { Matrix, MatrixValue } from '../../types/types';
+import { MatrixCell } from './MatrixCell';
+import { Matrix, MatrixValue } from '../types/types';
 
 interface ScreenInputProps {
   matrix: Matrix;
@@ -14,7 +14,7 @@ export const ScreenInput = ({ matrix, onUpdateCell, className }: ScreenInputProp
       <div className="grid h-fit w-full">
         <div className="h-fit w-full flex flex-col gap-5">
           {matrix.map((row, rowIndex) => (
-            <div key={rowIndex} className="flex gap-1">
+            <div key={rowIndex} className="flex gap-5">
               {row.map((value, colIndex) => (
                 <MatrixCell
                   key={colIndex}

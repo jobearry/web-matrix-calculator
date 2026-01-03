@@ -1,4 +1,4 @@
-import { BUTTON_STYLES } from '../lib/constants/constants';
+import { BUTTON_STYLES } from '../constants/constants';
 import type { ReactNode } from 'react';
 
 interface ControlButtonProps {

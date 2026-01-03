@@ -1,4 +1,4 @@
-import { INPUT_STYLES } from '../lib/constants/constants';
+import { INPUT_STYLES } from '../constants/constants';
 
 interface MatrixCellProps {
   value: string;
