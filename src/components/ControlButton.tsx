@@ -1,9 +1,8 @@
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { IconDefinition } from '@fortawesome/fontawesome-svg-core';
 import { BUTTON_STYLES } from '../lib/constants/constants';
+import type { ReactNode } from 'react';
 
 interface ControlButtonProps {
-  icon: IconDefinition;
+  icon: ReactNode;
   onClick: () => void;
   ariaLabel: string;
 }
@@ -15,7 +14,7 @@ export const ControlButton = ({ icon, onClick, ariaLabel }: ControlButtonProps) 
       onClick={onClick}
       aria-label={ariaLabel}
     >
-      <FontAwesomeIcon icon={icon} />
+      {icon}
     </button>
   );
 };

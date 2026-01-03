@@ -1,8 +1,11 @@
 import './App.css';
 import { ScreenInput } from './components/input-screen/input';
+import { MatrixDimensionControls } from './components/MatrixDimensionControls';
+import { useMatrix } from './hooks/useMatrix';
 
 function App() {
   const currYear = new Date().getFullYear();
+  const { matrix, updateCell, addRow, removeRow, addCol, removeCol } = useMatrix();
 
   return (
     <section className="h-screen bg-gray-200">
@@ -10,10 +13,17 @@ function App() {
         <h1 className="text-3xl mx-5 font-semibold">Matrix Calculator</h1>
       </nav>
 
-      <div className="my-5 grid place-items-center">
-        <div className="flex lg:flex-row flex-col w-full justify-evenly gap-4">
-          <ScreenInput />
-          <ScreenInput />
+      <div className="my-5 flex flex-col items-center justify-between h-100 gap-2">
+        <ScreenInput className='border' matrix={matrix} onUpdateCell={updateCell} />
+        <div className="flex w-full p-5">
+          <MatrixDimensionControls
+            onAddRow={addRow}
+            onRemoveRow={removeRow}
+            onAddCol={addCol}
+            onRemoveCol={removeCol}
+
+            className=''
+          />
         </div>
       </div>
 
