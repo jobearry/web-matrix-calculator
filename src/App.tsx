@@ -13,8 +13,8 @@ function App() {
         <h1 className="text-3xl mx-5 font-semibold">Matrix Calculator</h1>
       </nav>
 
-      <div className="my-5 flex flex-col items-center justify-between h-100 gap-2">
-        <ScreenInput className='border' matrix={matrix} onUpdateCell={updateCell} />
+      <div className="flex flex-col justify-between h-100 p-5">
+        <ScreenInput matrix={matrix} onUpdateCell={updateCell} />
         <div className="flex w-full p-5">
           <MatrixDimensionControls
             onAddRow={addRow}
