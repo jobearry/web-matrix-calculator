@@ -1,54 +1,35 @@
-# React + TypeScript + Vite
+# Matrix Calculator
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A modern web-based matrix calculator built with React, TypeScript, and Vite.
 
-Currently, two official plugins are available:
+## Features
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
+- **Dynamic Matrix Input**: Interactive matrix input screens with adjustable dimensions
+- **Dual Matrix Support**: Work with two matrices simultaneously
+- **Flexible Grid System**: Add or remove rows and columns dynamically (1x1 to 4x4 matrices)
+- **Responsive Design**: Clean, modern UI built with Tailwind CSS that works on desktop and mobile
+- **Intuitive Controls**:
+  - Arrow buttons to increase/decrease rows (up/down arrows)
+  - Chevron buttons to increase/decrease columns (left/right arrows)
+  - Real-time input validation
 
-## Expanding the ESLint configuration
+## Tech Stack
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- **React 19** - UI framework
+- **TypeScript** - Type-safe development
+- **Vite** - Fast build tool and dev server
+- **Tailwind CSS 4** - Utility-first CSS framework
+- **FontAwesome** - Icon library for UI controls
 
-```js
-export default tseslint.config({
-  extends: [
-    // Remove ...tseslint.configs.recommended and replace with this
-    ...tseslint.configs.recommendedTypeChecked,
-    // Alternatively, use this for stricter rules
-    ...tseslint.configs.strictTypeChecked,
-    // Optionally, add this for stylistic rules
-    ...tseslint.configs.stylisticTypeChecked,
-  ],
-  languageOptions: {
-    // other options...
-    parserOptions: {
-      project: ['./tsconfig.node.json', './tsconfig.app.json'],
-      tsconfigRootDir: import.meta.dirname,
-    },
-  },
-})
+```
+src/
+├── components/
+│   ├── input-screen/    # Matrix input component
+│   └── controls/        # Operation controls (in development)
+├── App.tsx              # Main application component
+└── main.tsx             # Application entry point
 ```
 
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
+## Author
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default tseslint.config({
-  plugins: {
-    // Add the react-x and react-dom plugins
-    'react-x': reactX,
-    'react-dom': reactDom,
-  },
-  rules: {
-    // other rules...
-    // Enable its recommended typescript rules
-    ...reactX.configs['recommended-typescript'].rules,
-    ...reactDom.configs.recommended.rules,
-  },
-})
-```
+Jobearry © 2026
