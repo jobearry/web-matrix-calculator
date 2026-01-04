@@ -18,7 +18,7 @@ export const MatrixCell = ({ value, onChange, rowIndex, colIndex }: MatrixCellPr
 
   return (
     <input
-      className={`${INPUT_STYLES.base} ${INPUT_STYLES.cell} p-2`}
+      className={`${INPUT_STYLES.base} ${INPUT_STYLES.cell} p-2 border border-[#b62c2c]`}
       type="text"
       inputMode="decimal"
       value={value}

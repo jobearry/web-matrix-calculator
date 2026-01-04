@@ -10,7 +10,7 @@ interface ScreenInputProps {
 
 export const ScreenInput = ({ matrix, onUpdateCell, className }: ScreenInputProps) => {
   return (
-    <div className={`grid border rounded-md border-gray-600 w-fit p-4 ${className}`}>
+    <div className={`grid border rounded-md border-gray-400 w-fit p-4 ${className}`}>
       <div className="grid h-fit w-full">
         <div className="h-fit w-full flex flex-col gap-5">
           {matrix.map((row, rowIndex) => (

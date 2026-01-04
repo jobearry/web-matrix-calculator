@@ -5,7 +5,9 @@ import { MatrixOperationControls } from "./matrix/components/MatrixOperationCont
 
 export const MatrixComponent = () => {
   const { matrix, updateCell, addRow, removeRow, addCol, removeCol } = useMatrix();
-  const test = () => {}
+  const handleOperation = (operation:string) => {
+    console.log(operation)
+  }
   return (
     <div className="flex flex-col items-center justify-between h-150 p-5 gap-2">
       <ScreenInput 
@@ -20,7 +22,7 @@ export const MatrixComponent = () => {
           className=''
         />
 
-        <MatrixOperationControls onClick={test}/>
+        <MatrixOperationControls onOperationClick={handleOperation}/>
       </div>
     </div>
   )
