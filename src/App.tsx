@@ -1,7 +1,7 @@
 import './App.css';
 import { Footer } from './components/footer';
 import { Navbar } from './components/navbar';
-import { MatrixComponent } from './features/Matrix';
+import { MatrixComponent } from './features/Matrix.tsx';
 
 function App() {
 
