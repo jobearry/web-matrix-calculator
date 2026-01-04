@@ -5,12 +5,13 @@ interface ControlButtonProps {
   icon: ReactNode;
   onClick: () => void;
   ariaLabel: string;
+  className?: string
 }
 
-export const ControlButton = ({ icon, onClick, ariaLabel }: ControlButtonProps) => {
+export const ControlButton = ({ icon, onClick, ariaLabel, className }: ControlButtonProps) => {
   return (
     <button
-      className={`${BUTTON_STYLES.base} ${BUTTON_STYLES.control}`}
+      className={`${BUTTON_STYLES.base} ${BUTTON_STYLES.control} ${className}`}
       onClick={onClick}
       aria-label={ariaLabel}
     >

@@ -1,5 +1,5 @@
 export const BUTTON_STYLES = {
-  base: 'border border-gray-600 grid place-items-center rounded-sm hover:bg-gray-300 transition-colors',
+  base: 'border border-gray-600 grid place-items-center rounded-sm hover:bg-gray-700 transition-colors',
   control: 'h-8 w-8',
 } as const;
 

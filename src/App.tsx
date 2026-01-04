@@ -6,7 +6,7 @@ import { MatrixComponent } from './features/matrix';
 function App() {
 
   return (
-    <section className="h-screen bg-gray-300">
+    <section className="">
       <Navbar />
       <MatrixComponent/>
       <Footer />
