@@ -58,5 +58,6 @@ export const useMatrix = (initialRows = 1, initialCols = 1) => {
     removeRow,
     addCol,
     removeCol,
+    setMatrix,
   };
 };
