@@ -1,29 +1,27 @@
-import { MatrixCell } from './MatrixCell';
 import { Matrix, MatrixValue } from '../types/types';
-import { MatrixUpperDisplay } from './MatrixUpperDisplay';
+import { MatrixCell } from './MatrixCell';
 
-interface ScreenInputProps {
+interface MatrixGridProps {
   matrix: Matrix;
   onUpdateCell: (rowIndex: number, colIndex: number, value: MatrixValue) => void;
   className?: string;
 }
 
-export const ScreenInput = ({ matrix, onUpdateCell, className }: ScreenInputProps) => {
+export const MatrixGrid = ({ matrix, onUpdateCell, className }: MatrixGridProps) => {
   return (
-    <div className={`grid border rounded-md border-gray-400 w-fit p-4 ${className}`}>
+    <div role="grid" aria-label="Matrix grid" className={`grid border-x rounded-md border-gray-400 w-fit p-2 ${className ?? ''}`}>
       <div className="grid h-fit w-full">
-        <div className="h-fit w-full flex flex-col gap-5">
+        <div className="h-fit w-full flex flex-col gap-3">
           {matrix.map((row, rowIndex) => (
-            <div key={rowIndex} className="flex gap-5">
+            <div key={rowIndex} role="row" className="flex gap-3">
               {row.map((value, colIndex) => (
-                <div className='flex flex-col gap-2'>
-                  <MatrixUpperDisplay />
+                <div key={colIndex} role="gridcell" className='flex flex-col gap-2'>
                   <MatrixCell
-                    key={colIndex}
                     value={value}
                     onChange={(newValue) => onUpdateCell(rowIndex, colIndex, newValue)}
                     rowIndex={rowIndex}
-                    colIndex={colIndex} />
+                    colIndex={colIndex}
+                  />
                 </div>
               ))}
             </div>

@@ -1,4 +1,4 @@
-import { Plus, Minus, Equal } from "lucide-react"
+import { Plus, Minus, X } from "lucide-react"
 import { ControlButton } from "./ControlButton"
 
 interface OperationControlsProps{
@@ -16,7 +16,7 @@ export const MatrixOperationControls = ({onOperationClick, className}: Operation
         <ControlButton className={"row-start-2"}
           icon={<Minus size={16} />} onClick={() => onOperationClick('-')} ariaLabel="minus operation" />
         <ControlButton className={"row-span-2 h-auto"}
-          icon={<Equal size={16} />} onClick={() => onOperationClick('=')} ariaLabel="equals operation" />
+          icon={<X size={16} />} onClick={() => onOperationClick('*')} ariaLabel="multiply operation" />
       </div>
     </div>
   )
