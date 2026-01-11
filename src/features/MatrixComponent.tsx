@@ -38,10 +38,12 @@ export const MatrixComponent = () => {
 
   return (
     <div className="flex flex-col items-center justify-between p-5 gap-2">
-      <div className="flex flex-nowrap md:flex-row gap-4 items-start">
-        <div className='w-full h-100 flex flex-col justify-between items-center'>
-          <h3 className="text-sm font-medium mb-2">Matrix A</h3>
-          <MatrixGrid matrix={A.matrix} onUpdateCell={A.updateCell} />
+      <div className="flex flex-col md:flex-row gap-4 items-start m-4">
+        <div className='w-80 md:h-70 flex md:flex-col flex-row justify-between items-center gap-5'>
+          <div className='flex flex-col'>
+            <h3 className="text-sm font-medium mb-2">Matrix A</h3>
+            <MatrixGrid matrix={A.matrix} onUpdateCell={A.updateCell} />
+          </div>
           <MatrixDimensionControls
             onAddRow={A.addRow}
             onRemoveRow={A.removeRow}
@@ -50,9 +52,11 @@ export const MatrixComponent = () => {
             className="mt-2"
           />
         </div>
-        <div className='w-full h-100 flex flex-col justify-between items-center'>
-          <h3 className="text-sm font-medium mb-2">Matrix B</h3>
-          <MatrixGrid matrix={B.matrix} onUpdateCell={B.updateCell} />
+        <div className='w-80 md:h-70 flex md:flex-col flex-row justify-between items-center gap-5'>
+          <div className='flex flex-col'>
+            <h3 className="text-sm font-medium mb-2">Matrix B</h3>
+            <MatrixGrid matrix={B.matrix} onUpdateCell={B.updateCell} />
+          </div>
           <MatrixDimensionControls
             onAddRow={B.addRow}
             onRemoveRow={B.removeRow}

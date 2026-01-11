@@ -19,7 +19,7 @@ export const MatrixDimensionControls = ({
   className
 }: MatrixDimensionControlsProps) => {
   return (
-    <div className={`flex gap-6 items-center justify-center p-4 border rounded-md 
+    <div className={`flex flex-col md:flex-row gap-6 items-center justify-center p-2 border rounded-md 
     border-gray-400 ${className}`}>
       <div className="flex flex-col gap-3">
         <span className="text-sm font-medium text-gray-400 text-center">Rows</span>
